@@ -76,11 +76,12 @@ const TodoListPersonal = () => {
 
   return (
     <>
-      <Box>
-        <BoxAddTask>
-          <TitleWork> TAREFAS PESSOAIS </TitleWork>
+      <Box id ='boxPersonal'>
+        <BoxAddTask id='boxPersonalTask'>
+          <TitleWork id='titlePersonal'> TAREFAS PESSOAIS </TitleWork>
 
           <InputNewTask
+            id='inputPersonalTitleHome'
             type="text"
             name="title"
             onChange={handleInput}
@@ -88,40 +89,41 @@ const TodoListPersonal = () => {
             maxLength="50"
           />
           <InputNewTask
+            id='inputPersonalDescriptionHome'
             type="text"
             name="title"
             onChange={handleDescription}
             placeholder="Descrição"
             maxLength="100"
           />
-          <ButtonAddTask onClick={registerTask}>
-            <AiFillPlusCircle size={'20px'} />
-            <TextButton>Adicionar Tarefa</TextButton>
+          <ButtonAddTask id='addTaskPersonalHome' onClick={registerTask}>
+            <AiFillPlusCircle id='circlePersonalHome' size={'20px'} />
+            <TextButton id='textButtonPersonalHome'>Adicionar Tarefa</TextButton>
           </ButtonAddTask>
         </BoxAddTask>
         {tasks.map((task) => (
           <ul>
-            <ListforTask key={task.id}>
-              <BoxList>
-                <TextList> {task.title} </TextList>
-                <DescriptionBox>
+            <ListforTask id='listforTaskPersonak' key={task.id}>
+              <BoxList id='boxlistPersonalHome'>
+                <TextList id='textListPersonalHome'> {task.title} </TextList>
+                <DescriptionBox id='descriptionBoxPersonalHome'>
                   {task.description}
-                  <Boxbuttons>
-                    <ButtonsList onClick={() => setOpenEditBox(true)}>
-                      <AiOutlineEdit size={'20px'} />
+                  <Boxbuttons id='boxButtonPersonalHome'>
+                    <ButtonsList id='buttonListPersonalHome' onClick={() => setOpenEditBox(true)}>
+                      <AiOutlineEdit  id='outlinePersonalHome' size={'20px'} />
                     </ButtonsList>
-                    <ButtonsList onClick={() => deleteTask(task)}>
+                    <ButtonsList id='buttonDeletePersonalHome' onClick={() => deleteTask(task)}>
                       <AiOutlineCloseCircle size={'20px'} />{' '}
                     </ButtonsList>
                   </Boxbuttons>
                 </DescriptionBox>
-                <Boxbuttons>
-                  <ButtonList onClick={() => sendToEnd(task)}>
-                    <AiOutlineCaretDown size={'20px'} /> <TextButton> Final da Lista </TextButton>
+                <Boxbuttons id='boxButtonPersonalHomeSendTask'>
+                  <ButtonList id='buttonSendToEndPersonalHome' onClick={() => sendToEnd(task)}>
+                    <AiOutlineCaretDown id='outilineCaretPersonalHome' size={'20px'} /> <TextButton id='textFinalPersonalHome'> Final da Lista </TextButton>
                   </ButtonList>
-                  <ButtonList onClick={() => sendTasktoWork(task)}>
-                    <ImUserTie size={'20px'} />
-                    <TextButton> Trabalho </TextButton>
+                  <ButtonList id='buttonSendToWorkPersonalHome' onClick={() => sendTasktoWork(task)}>
+                    <ImUserTie id='imUserPersonalHome' size={'20px'} />
+                    <TextButton id='textWorkPersonalHome'> Trabalho </TextButton>
                   </ButtonList>
                 </Boxbuttons>
                 <ModalPersonal

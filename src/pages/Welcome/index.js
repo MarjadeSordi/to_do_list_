@@ -13,10 +13,10 @@ const todayIs = day + '/' + (month + 1) + '/' + year;
 const Welcome = () => {
   return (
     <>
-      <TitleWelcome> Bem vindo, hoje é {todayIs} </TitleWelcome>
-      <WelcometoApp>
-        <TodoListWork />
-        <TodoListPersonal />
+      <TitleWelcome id='titleWelcome'> Bem vindo, hoje é {todayIs} </TitleWelcome>
+      <WelcometoApp id='welcomeApp'>
+        <TodoListWork id='toDoListWWork'/>
+        <TodoListPersonal id='toDoListPersonal'/>
       </WelcometoApp>{' '}
     </>
   );

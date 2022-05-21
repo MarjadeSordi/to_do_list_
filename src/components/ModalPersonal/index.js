@@ -37,29 +37,31 @@ const ModalPersonal = ({ openEditBox, setOpenEditBox, taskId, taskTitle, taskDes
   }
 
   return (
-    <ModalOverlay visible={openEditBox}>
-      <EditBox>
-        <ButtonCloseModal onClick={() => setOpenEditBox(false)}>
-          <AiOutlineCloseCircle size={'25px'} />
+    <ModalOverlay id='modalOverlay' visible={openEditBox}>
+      <EditBox id='editBox'>
+        <ButtonCloseModal id='buttonCloseModal' onClick={() => setOpenEditBox(false)}>
+          <AiOutlineCloseCircle id='AiOutlineCloseCircle' size={'25px'} />
         </ButtonCloseModal>
-        <TextforEdit> Edite sua tarefa </TextforEdit>
-        <LabelforEdit htmlFor="title" /> Título
+        <TextforEdit id='textForEdit'> Edite sua tarefa </TextforEdit>
+        <LabelforEdit id='labelForEdit' htmlFor="title" /> Título
         <InputNewTask
+          id='inputNewTaskPersonal'
           type="text"
           name="title"
           onChange={handleInputEdit}
           placeholder={taskTitle}
           maxLength="50"
         />
-        <LabelforEdit htmlFor="description" /> Descrição
+        <LabelforEdit id='labelForEditPersonal' htmlFor="description" /> Descrição
         <InputNewTask
+          id='inputNewTaskPersonalDescription'
           type="text"
           name="description"
           onChange={handleEditDescription}
           placeholder={taskDescripion}
           maxLength="100"
         />
-        <ButtonAddTask onClick={() => editTask(taskId)}> Enviar </ButtonAddTask>
+        <ButtonAddTask id='buttonAddTask' onClick={() => editTask(taskId)}> Enviar </ButtonAddTask>
       </EditBox>
     </ModalOverlay>
   );
