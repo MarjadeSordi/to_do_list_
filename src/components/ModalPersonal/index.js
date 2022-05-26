@@ -43,8 +43,9 @@ const ModalPersonal = ({ openEditBox, setOpenEditBox, taskId, taskTitle, taskDes
           <AiOutlineCloseCircle id='AiOutlineCloseCircle' size={'25px'} />
         </ButtonCloseModal>
         <TextforEdit id='textForEdit'> Edite sua tarefa </TextforEdit>
-        <LabelforEdit id='labelForEdit' htmlFor="title" /> Título
+        <LabelforEdit id='labelForEdit' htmlText='Título' htmlFor="title"> Título </LabelforEdit>
         <InputNewTask
+          value='Título'
           id='inputNewTaskPersonal'
           type="text"
           name="title"
@@ -52,7 +53,7 @@ const ModalPersonal = ({ openEditBox, setOpenEditBox, taskId, taskTitle, taskDes
           placeholder={taskTitle}
           maxLength="50"
         />
-        <LabelforEdit id='labelForEditPersonal' htmlFor="description" /> Descrição
+        <LabelforEdit id='labelForEditPersonal' htmlFor="description"> Descrição </LabelforEdit>
         <InputNewTask
           id='inputNewTaskPersonalDescription'
           type="text"
