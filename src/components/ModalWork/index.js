@@ -43,7 +43,7 @@ const ModalWork = ({ openEditBox, setOpenEditBox, taskId, taskTitle, taskDescrip
           <AiOutlineCloseCircle id='aiOutlineCloseCircleTwo' size={'25px'} />
         </ButtonCloseModal>
         <TextforEdit id='textForEditTwo'> Edite sua tarefa </TextforEdit>
-        <LabelforEdit id='labelForEditTwo' htmlFor="title" /> Título
+        <LabelforEdit id='labelForEditTwo' htmlFor="title"> Título </LabelforEdit>
         <InputNewTask
           id='InputNewTaskWork'
           type="text"
@@ -52,7 +52,7 @@ const ModalWork = ({ openEditBox, setOpenEditBox, taskId, taskTitle, taskDescrip
           placeholder={taskTitle}
           maxLength="50"
         />
-        <LabelforEdit id='labelForEditWork' htmlFor="description" /> Descrição
+        <LabelforEdit id='labelForEditWork' htmlFor="description"> Descrição </LabelforEdit>
         <InputNewTask
           id='inputNewTaskWorkDescription'
           type="text"
